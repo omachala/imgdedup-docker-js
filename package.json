@@ -1,0 +1,11 @@
+{
+  "name": "imgdedup-docker-js",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:omachala/imgdedup-docker-js.git",
+  "license": "MIT",
+  "scripts": {
+    "build": "docker build . -t images:latest",
+    "start": "docker run --rm -it -v $(pwd)/images:/images images && node generateHtml.js && open index.html"
+  }
+}
